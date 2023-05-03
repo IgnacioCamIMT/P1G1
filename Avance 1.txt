@@ -1,0 +1,4 @@
+Convertir de Binario a Decimal (Por posición)
+
+Ejercicio 1.-
+Convertir 10111010001 a (base 10)
