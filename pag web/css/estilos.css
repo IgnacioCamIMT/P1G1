@@ -1,0 +1,36 @@
+/*
+COMENTARIOS
+*/
+
+
+/*
+CSS contiene CLASES 
+Que es una Clase?
+
+.NOMBRE_CLASE{
+    ESTILO_1;
+    ESTILO_2;
+    ESTILO_3;
+}
+*/
+
+/*
+Como refenciar el archivo (.css) con (.html)
+Dentro de la etiqueta <HEAD> se escribe
+la refencia al archivo (.css)
+
+<head>
+    <link rel="stylesheet" type="text/css" 
+    href="UBICACION/NOMBRE_ARCHIVO.css">
+</head>
+
+*/
+
+
+.video_fondo {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: -1;
+}
