@@ -45,3 +45,53 @@ function menorAyB() {
         }
     }
 }
+
+function obtenerDiv() {
+    var A = parseInt(prompt("Ingrese A", 10))
+    var B = parseInt(prompt("Ingrese B", 7))
+    var resultado
+    resultado = A / B
+    alert(parseInt(resultado))
+}
+
+function obtenerMod() {
+    var A = parseInt(prompt("Ingrese A", 10))
+    var B = parseInt(prompt("Ingrese B", 7))
+    var resultado
+    resultado = A % B
+    alert(parseInt(resultado))
+}
+
+function obtenerCantidadDigN() {
+    var N = parseInt(prompt("Ingrese N", 9478324))
+    var resp = 0
+    var cantidad = 0
+    while (N != 0) {
+        N = parseInt(N / 10)
+        cantidad = cantidad + 1
+    }
+    alert("digitos: " + cantidad)
+}
+
+function mostrarDigN() {
+    var N = parseInt(prompt("Ingrese N", 9478324))
+    var dig = 0
+    while (N != 0) {
+        dig = parseInt(N % 10)
+        alert(dig)
+        N = parseInt(N / 10)
+    }
+}
+
+function existeDig3enN() {
+    var N = parseInt(prompt("Ingrese N", 9478324))
+    var dig = 0
+    while (N != 0) {
+        dig = parseInt(N % 10)
+        if(dig == 3){
+            alert("Existe el dig 3")
+        }
+        N = parseInt(N / 10)
+    }
+}
+
