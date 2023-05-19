@@ -114,3 +114,68 @@ function mostrarTres() {
         N = parseInt(N / 10);
     }
 }
+
+function areaPerimetroTrapecio() {
+    var h = parseInt(prompt("Ingrese h:", 10));
+    var b = parseInt(prompt("Ingrese b:", 5));
+    var B = parseInt(prompt("Ingrese B:", 15));
+    var a = parseInt(prompt("Ingrese a:", 10));
+    var c = parseInt(prompt("Ingrese c:", 7));
+
+    var Area = 0, Perimetro = 0;
+
+    Area = ((b + B) / 2) * h;
+    Perimetro = a + b + B + c;
+
+    alert("El área es: " + Area);
+    alert("El perímetro es: " + Perimetro);
+}
+
+function NParOImpar() {
+    /* If normal
+
+    var N = parseInt(prompt("Ingrese N:", 115));
+
+    if ((N % 2) == 0) {
+        alert(N + " es par.");
+    } else {
+        alert(N + " es impar.");
+    }
+
+    */
+   
+    // If abreviado
+
+    var N = parseInt(prompt("Ingrese N:", 115));
+    (N % 2) == 0 ? 10 : 1;
+}
+
+function ifNormal() {
+    var N = parseInt(prompt("Ingrese N:", 115));
+
+    if (N > 5) {
+        N = 10;
+    } else {
+        N = 1;
+    }
+    alert(N)
+}
+
+function ifAbreviado() {
+    var N = parseInt(prompt("Ingrese N:", 115));
+    N = (N > 5) ? 10 : 1;
+    alert(N);
+}
+
+function digitosNFOR() {
+    var N = parseInt(prompt("Ingresar N", 3));
+
+    if (N == 0) {
+        alert(1 + " dígitos");
+    } else {
+        for (var cantidad = 0; N != 0; cantidad += 1) {
+            N = parseInt(N / 10);
+        }
+        alert(cantidad + " dígitos");
+    }
+}
