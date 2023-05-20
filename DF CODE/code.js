@@ -179,3 +179,69 @@ function digitosNFOR() {
         alert(cantidad + " dígitos");
     }
 }
+
+// Práctico Segundo Parcial
+
+
+
+function digitosImpares() {
+    var N = parseInt(prompt("Ingresar N", 3));
+    var dig = 0;
+
+    while (N != 0) {
+        dig = N % 10;
+        if (dig % 2 != 0) {
+            alert(dig)
+        }
+        N = parseInt(N / 10);
+    }
+}
+
+function sumatoria1a10() {
+    var sumatoria = 0;
+    var i = 1;
+
+    while (i <= 10) {
+        sumatoria += i;
+        i++;
+    }
+    alert("sumatoria del 1 al 10: " + sumatoria);
+}
+
+function areaVolumenCilindro() {
+    var r = parseInt(prompt("Ingrese el radio:", 10));
+    var h = parseInt(prompt("Ingrese la altura:", 5));
+
+    var Area = 0, Volumen = 0;
+
+    Area = 2 * Math.PI * r * (r + h);
+    Volumen = Math.PI * Math.pow(r, 2) * h;
+
+    alert("El área es: " + Area);
+    alert("El perímetro es: " + Volumen);
+}
+
+function mostrarNumPosNeg() {
+    var N = parseInt(prompt("Ingresar N", 3));
+
+    if (N == 0) {
+        alert("Neutro");
+    } else {
+        if (N > 0) {
+            alert("Positivo");
+        } else {
+            alert("Negativo");
+        }
+    }
+}
+
+function mostrarNumMenor() {
+    var A = parseInt(prompt("Ingrese A:", 10));
+    var B = parseInt(prompt("Ingrese B:", 7));
+
+    if (A > B) {
+        alert(B + " es menor");
+    } else {
+        alert(A + " es menor");
+    }
+}
