@@ -299,3 +299,16 @@ function promedioNnotas() {
     suma = suma / N;
     alert(suma);
 }
+
+function obtenerNombreCompleto() {
+    var nombre = "Ignacio";
+    var apellido = "Camacho";
+    var nombreCompleto = nombre + " " + apellido;
+    return nombreCompleto;
+}
+
+
+function funcionConReturn() {
+    var myNombreCompleto = obtenerNombreCompleto();
+    alert(myNombreCompleto);
+}
