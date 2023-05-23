@@ -245,3 +245,57 @@ function mostrarNumMenor() {
         alert(A + " es menor");
     }
 }
+
+function NmultiploDeM() {
+    var N = parseInt(prompt("Ingrese N:", 10));
+    var M = parseInt(prompt("Ingrese M:", 5));
+
+    if ((N % M) == 0) {
+        alert(N + " es múltiplo de " + M);
+    } else {
+        alert(N + " no es múltiplo de " + M);
+    }
+}
+
+function sumatoriaMultiplosTres() {
+    var N = parseInt(prompt("Ingrese N:", 10));
+    var sum = 0, dig = 0;
+    
+    while (N != 0) {
+        dig = N % 10;
+        if ((dig % 3) == 0) {
+            sum += dig;
+        }
+        N = parseInt(N / 10);
+    }
+
+    alert(sum);
+}
+
+function sumAyBInclusivo() {
+    var A = parseInt(prompt("Ingrese A:", 3));
+    var B = parseInt(prompt("Ingrese B:", 9));
+    var suma = 0;
+    
+    while (A <= B) {
+        suma = suma + A;
+        A = A + 1;
+    }
+    
+    alert(suma);
+}
+
+function promedioNnotas() {
+    var N = parseInt(prompt("Ingrese N:", 15));
+    var suma = 0;
+    var i = 0;
+    
+    while (i < N) {
+        var nota = parseInt(prompt("Ingrese la nota:", 80));
+        suma = suma + nota;
+        i = i + 1;
+    }
+    
+    suma = suma / N;
+    alert(suma);
+}
