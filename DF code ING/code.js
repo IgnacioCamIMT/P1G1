@@ -149,3 +149,115 @@ function obtenerCantidadDigN_FOR() {
     }
     alert("digitos: " + cantidad)
 }
+
+//Practico Segundo Parcial
+function mostrarDigitosImpares() {
+    var N = parseInt(prompt("Ingrese N", 9478324))
+    var dig = 0
+    while (N != 0) {
+        dig = N % 10
+        if (dig % 2 == 1) {
+            alert("digito impar: " + dig)
+        }
+        N = parseInt(N / 10)
+    }
+}
+
+function mostrarSuma1_10() {
+    sum = 0
+    ini = 1
+    lim = 10
+    while (ini <= 10) {
+        sum = sum + ini
+        ini = ini + 1
+    }
+    alert("sumatoria de 1 a 10: " + sum)
+}
+
+function calcularAreaVolumenDeCilindro() {
+    var R = parseInt(prompt("Ingrese el radio: ", 3))
+    var H = parseInt(prompt("Ingrese la altura: ", 5))
+    var area = 2 * Math.PI * R * (R + H)
+    var volumen = Math.PI * Math.pow(R, 2) * H
+    alert("area: " + area + " volumen: " + volumen)
+}
+
+function mostrarPositivoNegativoNeutro() {
+    var N = parseInt(prompt("Introducir N: ", 5))
+    if (N > 0) {
+        alert("Positivo")
+    }
+    if (N < 0) {
+        alert("Negativo")
+    }
+    if (N == 0) {
+        alert("Neutro")
+    }
+}
+
+// version 1.0
+function mostrarMenorDosNumero() {
+    var A = parseInt(prompt("Ingrese el primer número: "))
+    var B = parseInt(prompt("Ingrese el segundo número: "))
+    if (A > B) {
+        alert("El menor es: " + B)
+    }
+    if (B > A) {
+        alert("El menor es: " + A)
+    }
+}
+
+function NmultiploDeM() {
+    var N = parseInt(prompt("Ingrese N: ", 10))
+    var M = parseInt(prompt("Ingrese M: ", 5))
+
+    if ((N % M) == 0) {
+        alert(N + " es múltiplo de " + M)
+    } else {
+        alert(N + " no es múltiplo de " + M)
+    }
+}
+
+function sumaDigMultiplos3deN() {
+    var N = parseInt(prompt("Ingrese N", 23462314))
+    var sum = 0
+    var dig = 0
+    while (N != 0) {
+        dig = parseInt(N % 10)
+        alert(dig)//IF para sumar los multiplos de 3
+        if ((dig % 3) == 0) {
+            sum = sum + dig
+        } else {
+            //nada
+        }
+        N = parseInt(N / 10)
+    }
+    alert(sum)
+}
+
+function sumarNrosEntreAyB() {
+    var A = parseInt(prompt("Ingrese A", 3))
+    var B = parseInt(prompt("Ingrese B", 9))
+    var suma = 0
+
+    while (B >= A) {
+        alert(A)
+        suma = suma + A
+        A = A + 1
+    }
+
+    alert(suma)
+}
+
+
+function promedioNdeNotas() {
+    var N = parseInt(prompt("Ingrese N", 15))
+    var sumaNota = 0
+    var i = 0
+    while(N > i){
+        i = i + 1
+        var nota = parseInt(prompt("Ingrese Nota", 80))
+        sumaNota = sumaNota + nota
+    }
+    alert(sumaNota/N)
+}
