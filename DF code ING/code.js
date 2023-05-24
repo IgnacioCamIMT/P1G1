@@ -335,7 +335,10 @@ function adjuntarValor(numero){
 }
 
 function factorial(){
-    alert("Soy Factorial")
+    var N = obtenerValor()
+    var resultadoFact = calcularFactorial(N)
+    darValor(resultadoFact)
+    //alert("Soy Factorial")
 }
 
 function potencia(){
