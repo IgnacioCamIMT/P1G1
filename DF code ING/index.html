@@ -15,7 +15,10 @@
     <h1>CALCULADORA ESTÁNDAR</h1>
     <table>
         <tr>
-            <td colspan="4">RESULTADO</td>
+            <td colspan="4">
+                <input id="resultado"
+                type="text" placeholder="0" >
+            </td>
         </tr>
 
         <tr>
@@ -30,8 +33,8 @@
                 </button>
             </td>
             <td>
-                <button onclick="MOD()">
-                    MOD
+                <button onclick="borrar()">
+                    Borrar
                 </button>
             </td>
             <td>
@@ -43,17 +46,17 @@
 
         <tr>
             <td>
-                <button onclick="siete()">
+                <button onclick="numero(7)">
                     7
                 </button>
             </td>
             <td>
-                <button onclick="ocho()">
+                <button onclick="numero(8)">
                     8
                 </button>
             </td>
             <td>
-                <button onclick="nueve()">
+                <button onclick="numero(9)">
                     9
                 </button>
             </td>
@@ -66,55 +69,71 @@
 
         <tr>
             <td>
-                <button onclick="cuatro()">
+                <button onclick="numero(4)">
                     4
                 </button>
             </td>
             <td>
-                <button onclick="cinco()">
+                <button onclick="numero(5)">
                     5
                 </button>
             </td>
             <td>
-                <button onclick="seis()">
+                <button onclick="numero(6)">
                     6
                 </button>
             </td>
             <td>
-                <button onclick="menos()">
-                    menos
+                <button onclick="restar()">
+                    restar
                 </button>
             </td>
         </tr>
 
         <tr>
             <td>
-                <button onclick="uno()">
+                <button onclick="numero(1)">
                     1
                 </button>
             </td>
             <td>
-                <button onclick="dos()">
+                <button onclick="numero(2)">
                     2
                 </button>
             </td>
             <td>
-                <button onclick="tres()">
+                <button onclick="numero(3)">
                     3
                 </button>
             </td>
             <td>
-                <button onclick="mas()">
-                    mas
+                <button onclick="sumar()">
+                    sumar
                 </button>
             </td>
         </tr>
 
         <tr>
-            <td>+/-</td>
-            <td>0</td>
-            <td>MOD</td>
-            <td>igual</td>
+            <td>
+                <button onclick="masMenos()">
+                    +/-
+                </button>
+            </td>
+            <td>
+                <button onclick="numero(0)">
+                    0
+                </button>
+            </td>
+            <td>
+                <button onclick="mod()">
+                    mod
+                </button>
+            </td>
+            <td>
+                <button onclick="igual()">
+                    igual
+                </button>
+            </td>
         </tr>
     </table>
 
@@ -196,15 +215,15 @@
         calcular area y volumen de un cilindro
     </button>
 
-    <h2>7. Desarrolle un diagrama de flujo que permita leer 
-        un número y muestre si el número es positivo o 
-        negativo, en caso del número 0, mostrar que es 
+    <h2>7. Desarrolle un diagrama de flujo que permita leer
+        un número y muestre si el número es positivo o
+        negativo, en caso del número 0, mostrar que es
         un número “neutro”</h2>
     <button onclick="mostrarPositivoNegativoNeutro()">
         mostrar si positivo, negativo o neutro
     </button>
 
-    <h2>9. Desarrollar un diagrama de flujo donde 
+    <h2>9. Desarrollar un diagrama de flujo donde
         se ingresen dos números y te muestre cual
         es el número menor</h2>
     <button onclick="mostrarMenorDosNumero()">
@@ -229,6 +248,11 @@
     <h2>13. Calcular N promedio de notas </h2>
     <button onclick="promedioNdeNotas()">
         Calcular N promedio de notas
+    </button>
+
+    <h2>14. Ejemplo de FUNCION con return</h2>
+    <button onclick="funcionConReturn()">
+        Ejemplo de FUNCION con return
     </button>
 
     <br><br><br><br><br><br>

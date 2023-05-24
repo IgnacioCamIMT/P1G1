@@ -18,6 +18,27 @@ function factorialN() {
     }
 }
 
+function calcularFactorial(N) {
+    //var N = prompt("Ingrese N", 3)
+    var i = 1
+    var resp = 1
+    if (N >= 0) {
+        if (N == 0) {
+            //alert("El factorial de N es " + resp)
+            return resp
+        } else {
+            while (N >= i) {
+                resp = resp * i
+                i = i + 1
+            }
+            //alert("Factorial de N es: " + resp)
+            return resp
+        }
+    } else {
+        alert("No factorial de un negativo")
+    }
+}
+
 function mayorAyB() {
     var A = parseInt(prompt("Ingrese A", 10))
     var B = parseInt(prompt("Ingrese B", 7))
@@ -257,7 +278,118 @@ function promedioNdeNotas() {
     while(N > i){
         i = i + 1
         var nota = parseInt(prompt("Ingrese Nota", 80))
+        
         sumaNota = sumaNota + nota
     }
     alert(sumaNota/N)
+}
+
+var myVariableGlobal = "Hola Mundo"
+
+function obtenerNombreCompleto(nombre, apellido){
+    var nombreCompleto =  nombre + " " + apellido + " " + myVariableGlobal
+    return nombreCompleto
+}
+
+function obtenerEdad(edad){
+    edad = edad + 10
+    return edad
+}
+
+function verificarMayorEdad(edad){
+    if(edad >= 18){
+        alert("Puedes pasar " + myVariableGlobal)
+    }else{
+        alert("Vuelve cuando tengas 18 " + myVariableGlobal)
+    }
+}
+
+function funcionConReturn(){
+    var myNombreCompleto = obtenerNombreCompleto("Alex", "Ferrufino")
+    var myEdad = obtenerEdad(10)
+    alert("Nombre: " + myNombreCompleto)
+    alert("Edad: " + myEdad)
+    verificarMayorEdad(myEdad)
+}
+ 
+/*  SECCION DE CODIGO PARA LA CALCULADORA */
+
+// Dar un nuevo valor al INPUT "resultado" en la pag HTML
+function darValor(valor){
+    document.getElementById("resultado").value = valor
+}
+
+// Obtener el valor actual del INPUT "resultado" en la pag HTML
+function obtenerValor(){
+   var nro = document.getElementById("resultado").value
+   return nro
+   //alert(nro)
+}
+
+// Adjuntar un nuevo valor a la derecha 
+// del INPUT "resultado" en la pag HTML
+function adjuntarValor(numero){
+    var actualNumero = obtenerValor()
+    var juntarNumeros = actualNumero + "" + numero
+    darValor(juntarNumeros)
+}
+
+function factorial(){
+    alert("Soy Factorial")
+}
+
+function potencia(){
+    alert("Soy Potencia")
+}
+
+function borrar(){
+    var vacio = ""
+    darValor(vacio)
+    //alert("Soy Borrar")
+}
+
+function dividir(){
+    alert("Soy Dividir")
+}
+
+function numero(dig){
+    adjuntarValor(dig)
+    //alert("Soy Numero " + dig)
+}
+
+function multiplicar(){
+    alert("Soy Multiplicar")
+}
+
+function restar(){
+    alert("Soy Restar")
+}
+
+function sumar(){
+    alert("Soy Sumar")
+}
+
+function masMenos(){
+    var valorResultado = obtenerValor()
+    if(valorResultado == 0){
+        //nada
+    }else{
+        if(valorResultado > 0){
+            //positivo
+            valorResultado = valorResultado * -1
+        }else{
+            //negativo
+            valorResultado = valorResultado * -1
+        }
+    }
+    darValor(valorResultado)
+    //alert("Soy Mas Menos: " + valorResultado)
+}
+
+function mod(){
+    alert("Soy MOD")
+}
+
+function igual(){
+    alert("Soy Igual")
 }
