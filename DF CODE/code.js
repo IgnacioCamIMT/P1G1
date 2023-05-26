@@ -1,3 +1,10 @@
+// Variables globales
+
+var A = 0
+var operacion;
+
+// Funciones
+
 function factorialN() {
     var N = prompt("Ingrese un valor:", 3);
     var i = 1;
@@ -369,13 +376,29 @@ function calcularFactorial(N) {
     }
 }
 
+function atras() {
+    darValor(A);
+}
+
+function convBIN() {
+    dec = obtenerValor();
+    var bin = ""
+    while (dec > 0) {
+        bin = (dec % 2) + bin;
+        dec = parseInt(dec / 2);
+    }
+    darValor(bin);
+}
+
 function factorial() {
     var actualValor = obtenerValor();
     darValor(calcularFactorial(actualValor));
 }
 
 function potencia() {
-    alert("Soy Potencia");
+    A = obtenerValor();
+    darValor("");
+    operacion = "potencia";
 }
 
 function borrar() {
@@ -383,27 +406,67 @@ function borrar() {
 }
 
 function dividir() {
-    alert("Soy Dividir");
+    A = obtenerValor();
+    darValor("");
+    operacion = "dividir";
 }
 
 function multiplicar() {
-    alert("Soy Multiplicar");
+    A = obtenerValor();
+    darValor("");
+    operacion = "multiplicar";
 }
 
 function restar() {
-    alert("Soy Restar");
+    A = obtenerValor();
+    darValor("");
+    operacion = "restar";
 }
 
 function sumar() {
-    alert("Soy Sumar");
+    A = parseInt(obtenerValor());
+    darValor("");
+    operacion = "sumar";
 }
 
 function igual() {
-    alert("Soy Igual");
+    var B = parseInt(obtenerValor());
+    if (operacion == "potencia") {
+        var res = NpotenciaDePconParams(A, B);
+        darValor(res);
+        operacion = "";
+    }
+    if (operacion == "dividir") {
+        var res = dividirAyB(A, B);
+        darValor(res);
+        operacion = "";
+    }
+    if (operacion == "multiplicar") {
+        var res = multiplicarAyB(A, B);
+        darValor(res);
+        operacion = "";
+    }
+    if (operacion == "restar") {
+        var res = restarAyB(A, B);
+        darValor(res);
+        operacion = "";
+    }
+    if (operacion == "sumar") {
+        var res = sumarAyB(A, B);
+        darValor(res);
+        operacion = "";
+    }
+    if (operacion == "MOD") {
+        var res = ModAyB(A, B);
+        darValor(res);
+        operacion = "";
+    }
 }
 
 function MOD() {
-    alert("Soy MOD");
+    A = obtenerValor();
+    darValor("");
+    operacion = "MOD";
 }
 
 function inverso() {
@@ -413,4 +476,46 @@ function inverso() {
 
 function numero(dig) {
     adjuntarValor(dig);
+}
+
+function NpotenciaDeP() {
+    var N = parseInt(prompt("Ingrese N:", 3));
+    var P = parseInt(prompt("Ingrese P:", 4));
+    var i = 1, res = 1
+
+    while (i <= P) {
+        res = res * N
+        i = i + 1
+    }
+
+    alert(res)
+}
+
+function NpotenciaDePconParams(N, P) {
+    var i = 1, res = 1
+    while (i <= P) {
+        res = res * N
+        i = i + 1
+    }
+    return res;
+}
+
+function dividirAyB(A, B){
+    return A / B;
+}
+
+function multiplicarAyB(A, B){
+    return A * B;
+}
+
+function restarAyB(A, B){
+    return A - B;
+}
+
+function sumarAyB(A, B){
+    return A + B;
+}
+
+function ModAyB(A, B){
+    return A % B;
 }
