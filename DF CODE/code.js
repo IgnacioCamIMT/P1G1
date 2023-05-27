@@ -519,3 +519,131 @@ function sumarAyB(A, B){
 function ModAyB(A, B){
     return A % B;
 }
+
+// Strings
+
+function getCharByPosition() {
+    var cadena = prompt("Ingrese una cadena", "Hola Mundo");
+    var pos = parseInt(prompt("Ingrese una posición", 3));
+    var caracter = cadena[pos];
+    alert(caracter);
+}
+
+function joinTwoStrings() {
+    var cadenaA = prompt("Ingrese la cadena A", "Hola");
+    var cadenaB = prompt("Ingrese la cadena B", "Mundo");
+    var cadenasUnidas = cadenaA + cadenaB;
+    alert(cadenasUnidas);
+}
+
+function aCharFrequency() {
+    var cadena = prompt("Ingrese una cadena", "Hola Mundo");
+    var longCad = cadena.length;
+    var i = 0;
+    var frecuencia = 0;
+
+    while (i < longCad) {
+        var caracter = cadena[i];
+        if (caracter == 'a'){
+            frecuencia++;
+        }
+        i++;
+    }
+    alert("La frecuencia de 'a' es: " + frecuencia);
+}
+
+function myNameInASCII() {
+    var var_P = String.fromCharCode(80);
+    var var_a = String.fromCharCode(97);
+    var var_b = String.fromCharCode(98);
+    var var_l = String.fromCharCode(108);
+    var var_o = String.fromCharCode(111);
+    var var_space = String.fromCharCode(32);
+    var var_I = String.fromCharCode(73);
+    var var_g = String.fromCharCode(103);
+    var var_n = String.fromCharCode(110);
+    var var_a = String.fromCharCode(97);
+    var var_c = String.fromCharCode(99);
+    var var_i = String.fromCharCode(105);
+    var var_o = String.fromCharCode(111);
+    var var_C = String.fromCharCode(67);
+    var var_a = String.fromCharCode(97);
+    var var_m = String.fromCharCode(109);
+    var var_a = String.fromCharCode(97);
+    var var_c = String.fromCharCode(99);
+    var var_h = String.fromCharCode(104);
+    var var_o = String.fromCharCode(111);
+    var var_G = String.fromCharCode(71);
+    var var_u = String.fromCharCode(117);
+    var var_t = String.fromCharCode(116);
+    var var_i = String.fromCharCode(105);
+    var var_e = String.fromCharCode(101);
+    var var_r = String.fromCharCode(114);
+    var var_r = String.fromCharCode(114);
+    var var_e = String.fromCharCode(101);
+    var var_z = String.fromCharCode(122);
+    alert(var_P + var_a + var_b + var_l + var_o + var_space +
+          var_I + var_g + var_n + var_a + var_c + var_i + var_o + var_space +
+          var_C + var_a + var_m + var_a + var_c + var_h + var_o + var_space +
+          var_G + var_u + var_t + var_i + var_e + var_r + var_r + var_e + var_z);
+}
+
+function isVocal(caracter) {
+    return caracter == 'a' || caracter == 'e' || caracter == 'i' || caracter == 'o' || caracter == 'u' ||
+           caracter == 'A' || caracter == 'E' || caracter == 'I' || caracter == 'O' || caracter == 'U';
+}
+
+function countVocals() {
+    var cadena = prompt("Ingrese una cadena", "Hola Mundo");
+    var longCad = cadena.length;
+    var i = 0;
+    var frecuencia = 0;
+
+    while (i < longCad) {
+        var caracter = cadena[i];
+        if (isVocal(caracter)){
+            frecuencia++;
+        }
+        i++;
+    }
+    alert("La cantidad de vocales es: " + frecuencia)
+}
+
+function countWords() {
+    var cadena = prompt("Ingrese una cadena", "Hola Mundo");
+    var longCad = cadena.length;
+    var i = 0;
+    var frecuencia = 1;
+
+    while (i < longCad) {
+        var caracter = cadena[i];
+        if (caracter == " "){
+            frecuencia++;
+        }
+        i++;
+    }
+
+    alert("La cantidad de palabras es: " + frecuencia)
+}
+
+function invertirPalabras(cadena) {
+    var longCad = cadena.length;
+    var i = 0;
+    var invertido = "";
+
+    while (i < longCad) {
+        var caracter = cadena[i];
+        invertido = caracter + invertido;
+        i++;
+    }
+
+    alert(invertido)
+}
+
+function invertirPalabrasPorMayuscula() {
+    var cadena = prompt("Ingrese una cadena", "HolaMundo");
+    var i = 1;
+    var invertido = cadena[0];
+
+    alert(String.getC)
+}
