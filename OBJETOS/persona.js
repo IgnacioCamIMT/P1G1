@@ -1,66 +1,74 @@
-// 1.- Nombre de la clase
-class Persona{
-    carnet = 0;
-    nombre = "";
-    edad = 0;
+//1.- NOMBRE DE LA CLASE
+ class Persona {
+    //2.- PROPIEDAD
+    carnet = 0
+    nombre = ""
+    edad = 0
 
+    //3.- CONSTRUCTOR, ASIGNAR VALORES POR DEFECTO
     constructor() {
-        this.carnet = 1234567;
-        this.nombre = "MyNombre";
-        this.edad = 100;
+        this.carnet = 1234567
+        this.nombre = "MyNombre"
+        this.edad = 100
     }
 
-    //4 Setters and Getters - dar y obtener valores
-    getCarnet() {
-        return this.carnet;
-    }
-    
-    getNombre() {
-        return this.nombre;
-    }
-    
-    getEdad() {
-        return this.edad;
-    }
-    
-    setCarnet(carnetNuevo) {
-        this.carnet = carnetNuevo;
-    }
-    
-    setNombre(nombreNuevo) {
-        this.nombre = nombreNuevo;
-    }
-    
-    setEdad(edadNueva) {
-        this.edad = edadNueva;
-    }
-    
-    // 5.- Métodos
-    
-    toString() {
-        return this.getCarnet() + " "
-        + this.getNombre() + " "
-        + this.getEdad();
+    //4.- SETTERS AND GETTERS - DAR Y OBTENER UN VALOR
+    GetCarnet() {
+        return this.carnet
     }
 
-    esVocal(caracter) {
-        return caracter == 'a' || caracter == 'e' || caracter == 'i' || caracter == 'o' || caracter == 'u' ||
-            caracter == 'A' || caracter == 'E' || caracter == 'I' || caracter == 'O' || caracter == 'U';
+    GetNombre() {
+        return this.nombre
     }
 
-    contarVocales() {
-        var cadena = this.getNombre();
-        var longCad = cadena.length;
-        var i = 0;
-        var frecuencia = 0;
+    GetEdad() {
+        return this.edad
+    }
 
-        while (i < longCad) {
-            var caracter = cadena[i];
-            if (esVocal(caracter)){
-                frecuencia++;
+    SetCarnet(valor){
+        this.carnet = valor
+    }
+    
+    SetNombre(valor){
+        this.nombre = valor
+    }
+
+    SetEdad(valor){
+        this.edad = valor
+    }
+
+    //5.- LOS METODOS DE LA CLASE, 0 ....
+
+    toString(){
+        return this.GetCarnet() 
+        + " " 
+        + this.GetNombre() 
+        + " " 
+        + this.GetEdad() 
+    }
+
+
+
+
+    ContarVocales(){
+        var cadena = this.GetNombre()
+        var longitudCad = cadena.length
+        var i = 0
+        var contar = 0
+        while (longitudCad > i) {
+            var caracter = cadena[i]
+            i++
+            if (caracter == 'a' 
+            || caracter == 'e' 
+            || caracter == 'i'  
+            || caracter == 'o'  
+            || caracter == 'u') {
+                contar = contar + 1
             }
-            i++;
+            //alert(caracter)
         }
-        alert("La cantidad de vocales es: " + frecuencia)
+        //alert("La frecuencia de 'a, e, i' es: " + contar)
+        return contar
     }
+
 }

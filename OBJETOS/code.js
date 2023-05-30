@@ -1,9 +1,14 @@
-function verPersonas() {
-    var persona = new Persona(); // Se crea una instancia de la clase
-    persona.setNombre("Ignacio");
-    persona.setCarnet(15);
-    var name = persona.getNombre();
+function VerPersonas() {
+    var persona1 = new Persona()
+    persona1.SetNombre("Escalante")
+    persona1.SetEdad(15)
+    persona1.SetCarnet(1000)
 
-    alert(persona.toString());
+    var persona2 = new Persona()
+
+
+    alert(persona1.toString())
+    alert(persona2.toString())
+
 
 }
