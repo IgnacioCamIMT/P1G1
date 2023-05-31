@@ -1,3 +1,9 @@
+///////////////////// VARIABLES GLOBALES
+
+var A = 0
+var operacion = ""
+
+////////////////////FUNCIONES
 
 function factorialN() {
     var N = prompt("Ingrese N", 3)
@@ -275,112 +281,127 @@ function promedioNdeNotas() {
     var N = parseInt(prompt("Ingrese N", 15))
     var sumaNota = 0
     var i = 0
-    while(N > i){
+    while (N > i) {
         i = i + 1
         var nota = parseInt(prompt("Ingrese Nota", 80))
-        
+
         sumaNota = sumaNota + nota
     }
-    alert(sumaNota/N)
+    alert(sumaNota / N)
 }
 
 var myVariableGlobal = "Hola Mundo"
 
-function obtenerNombreCompleto(nombre, apellido){
-    var nombreCompleto =  nombre + " " + apellido + " " + myVariableGlobal
+function obtenerNombreCompleto(nombre, apellido) {
+    var nombreCompleto = nombre + " " + apellido + " " + myVariableGlobal
     return nombreCompleto
 }
 
-function obtenerEdad(edad){
+function obtenerEdad(edad) {
     edad = edad + 10
     return edad
 }
 
-function verificarMayorEdad(edad){
-    if(edad >= 18){
+function verificarMayorEdad(edad) {
+    if (edad >= 18) {
         alert("Puedes pasar " + myVariableGlobal)
-    }else{
+    } else {
         alert("Vuelve cuando tengas 18 " + myVariableGlobal)
     }
 }
 
-function funcionConReturn(){
+function funcionConReturn() {
     var myNombreCompleto = obtenerNombreCompleto("Alex", "Ferrufino")
     var myEdad = obtenerEdad(10)
     alert("Nombre: " + myNombreCompleto)
     alert("Edad: " + myEdad)
     verificarMayorEdad(myEdad)
 }
- 
+
 /*  SECCION DE CODIGO PARA LA CALCULADORA */
 
 // Dar un nuevo valor al INPUT "resultado" en la pag HTML
-function darValor(valor){
+function darValor(valor) {
     document.getElementById("resultado").value = valor
 }
 
 // Obtener el valor actual del INPUT "resultado" en la pag HTML
-function obtenerValor(){
-   var nro = document.getElementById("resultado").value
-   return nro
-   //alert(nro)
+function obtenerValor() {
+    var nro = document.getElementById("resultado").value
+    return nro
+    //alert(nro)
 }
 
 // Adjuntar un nuevo valor a la derecha 
 // del INPUT "resultado" en la pag HTML
-function adjuntarValor(numero){
+function adjuntarValor(numero) {
     var actualNumero = obtenerValor()
     var juntarNumeros = actualNumero + "" + numero
     darValor(juntarNumeros)
 }
 
-function factorial(){
+function factorial() {
     var N = obtenerValor()
     var resultadoFact = calcularFactorial(N)
     darValor(resultadoFact)
     //alert("Soy Factorial")
 }
 
-function potencia(){
-    alert("Soy Potencia")
+function potencia() {
+    A = obtenerValor()
+    darValor("")
+    operacion = "potencia"
+    //alert("Soy Potencia")
 }
 
-function borrar(){
+function borrar() {
     var vacio = ""
     darValor(vacio)
     //alert("Soy Borrar")
 }
 
-function dividir(){
-    alert("Soy Dividir")
+function dividir() {
+    A = obtenerValor()
+    darValor("")
+    operacion = "dividir"
+    //alert("Soy Dividir")
 }
 
-function numero(dig){
+function numero(dig) {
     adjuntarValor(dig)
     //alert("Soy Numero " + dig)
 }
 
-function multiplicar(){
-    alert("Soy Multiplicar")
+function multiplicar() {
+    A = obtenerValor()
+    darValor("")
+    operacion = "multiplicar"
+    //alert("Soy Multiplicar")
 }
 
-function restar(){
-    alert("Soy Restar")
+function restar() {
+    A = obtenerValor()
+    darValor("")
+    operacion = "restar"
+    //alert("Soy Restar")
 }
 
-function sumar(){
-    alert("Soy Sumar")
+function sumar() {
+    A = obtenerValor()
+    darValor("")
+    operacion = "sumar"
+    //alert("Soy Sumar")
 }
 
-function masMenos(){
+function masMenos() {
     var valorResultado = obtenerValor()
-    if(valorResultado == 0){
+    if (valorResultado == 0) {
         //nada
-    }else{
-        if(valorResultado > 0){
+    } else {
+        if (valorResultado > 0) {
             //positivo
             valorResultado = valorResultado * -1
-        }else{
+        } else {
             //negativo
             valorResultado = valorResultado * -1
         }
@@ -389,10 +410,145 @@ function masMenos(){
     //alert("Soy Mas Menos: " + valorResultado)
 }
 
-function mod(){
-    alert("Soy MOD")
+function mod() {
+    A = obtenerValor()
+    darValor("")
+    operacion = "mod"
+    //alert("Soy MOD")
 }
 
-function igual(){
-    alert("Soy Igual")
+function igual() {
+    var B = obtenerValor()
+    if (operacion == "potencia") {
+        var res = NpotenciaPconParametros(A, B)
+        darValor(res)
+    }
+    if (operacion == "mod") {
+        var res = A % B
+        darValor(res)
+    }
+    if (operacion == "dividir") {
+        var res = A / B
+        darValor(res)
+    }
+    if (operacion == "multiplicar") {
+        var res = A * B
+        darValor(res)
+    }
+    if (operacion == "restar") {
+        var res = A - B
+        darValor(res)
+    }
+    if (operacion == "sumar") {
+        var res = parseInt(A) + parseInt(B)
+        darValor(res)
+    }
+    //alert("Soy Igual")
+}
+
+function NpotenciaP() {
+    var N = parseInt(prompt("Ingrese N", 3))
+    var P = parseInt(prompt("Ingrese P", 4))
+    var i = 1, res = 1
+    while (i <= P) {
+        res = res * N
+        i++
+    }
+    alert(res)
+}
+
+
+function NpotenciaPconParametros(N, P) {
+    var i = 1, res = 1
+    while (i <= P) {
+        res = res * N
+        i++
+    }
+    return res
+    //alert(res)
+}
+
+function GetCharByPosition() {
+    var cadena = prompt("Ingrese una Cadena", "Hola Mundo")
+    var pos = parseInt(prompt("Ingrese Posición", 3))
+    var caracter = cadena[pos]
+    alert(caracter)
+}
+
+function JoinTwoString() {
+    var cadenaA = prompt("Ingrese una Cadena A", "Hola")
+    var cadenaB = prompt("Ingrese una Cadena B", "Mundo")
+    var unir = cadenaA + cadenaB
+    alert(unir)
+}
+
+
+function GetFrecuencyOfChar() {
+    var cadena = prompt("Ingrese una Cadena", "Universidad Cumbre")
+    var longitudCad = cadena.length
+    var i = 0
+    var contar = 0
+    while (longitudCad > i) {
+        var caracter = cadena[i]
+        i++
+        if (caracter == 'a') {
+            contar = contar + 1
+        }
+        alert(caracter)
+    }
+    alert("La frecuencia de 'a' es: " + contar)
+}
+
+function MyNameInASCII() { //nombre completo
+    var var_E = String.fromCharCode(69);
+    var var_d = String.fromCharCode(100);
+    var var_d = String.fromCharCode(100);
+    var var_y = String.fromCharCode(121);
+    alert(var_E + var_d + var_d + var_y)
+}
+
+function MostrarAbecedario(){
+    //mostrar el abcedario
+    inicio = 97
+    fin = 122
+    while (fin >= inicio) {
+        var letra = String.fromCharCode(inicio);
+        alert(letra)
+        inicio++
+    }
+}
+
+function ContarVocales(){
+    var cadena = prompt("Ingrese una Cadena", "Universidad Cumbre")
+    var longitudCad = cadena.length
+    var i = 0
+    var contar = 0
+    while (longitudCad > i) {
+        var caracter = cadena[i]
+        i++
+        if (caracter == 'a' 
+        || caracter == 'e' 
+        || caracter == 'i'  
+        || caracter == 'o'  
+        || caracter == 'u') {
+            contar = contar + 1
+        }
+        //alert(caracter)
+    }
+    alert("La frecuencia de 'a, e, i' es: " + contar)
+}
+
+function ContarPalabras(){
+    var cadena = prompt("Ingrese una Cadena", "Universidad Privada Cumbre")
+    var longitudCad = cadena.length
+    var i = 0
+    var contar = 1
+    while (longitudCad > i) {
+        var caracter = cadena[i]
+        i++
+        if (caracter == ' ') {
+            contar = contar + 1
+        }
+    }
+    alert("La cantidad de palabras es: " + contar)
 }

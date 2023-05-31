@@ -37,18 +37,15 @@
         this.edad = valor
     }
 
-    //5.- LOS METODOS DE LA CLASE, 0 ....
+    //5.- LOS METODOS DE LA CLASE, 0 ....N
 
     toString(){
-        return this.GetCarnet() 
+        return "Persona: " + this.GetCarnet() 
         + " " 
         + this.GetNombre() 
         + " " 
         + this.GetEdad() 
     }
-
-
-
 
     ContarVocales(){
         var cadena = this.GetNombre()
